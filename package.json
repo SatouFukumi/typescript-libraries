@@ -1,11 +1,9 @@
 {
   "name": "@fukumi/libraries",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Typescript libraries.",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "src/index.ts",
   "repository": "https://github.com/SatouFukumi/clsn.git",
   "author": "Fukumi <satoufukumii@gmail.com>",
   "license": "MIT",
@@ -15,7 +13,7 @@
     "node": ">=18.0.0"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "scripts": {
     "build": "tsc",
