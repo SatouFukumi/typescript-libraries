@@ -1,33 +1,23 @@
 {
   "name": "@fukumi/libraries",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Typescript libraries.",
-  "type": "module",
-  "main": "src/index.ts",
-  "repository": "https://github.com/SatouFukumi/clsn.git",
   "author": "Fukumi <satoufukumii@gmail.com>",
-  "license": "MIT",
-  "private": false,
+  "scripts": {
+    "start": "node lib/index.js",
+    "watch": "tsbb watch --disable-babel --file-names src/index.ts",
+    "build": "tsbb build --disable-babel --file-names src/index.ts",
+    "test": "yarn build && tsbb test",
+    "coverage": "yarn build && tsbb test --coverage --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SatouFukumi/typescript-libraries",
+    "folder": "src"
+  },
   "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=18.0.0"
-  },
-  "files": [
-    "src"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "test:build": "yarn build && jest",
-    "test:alone": "jest",
-    "publish:latest": "yarn build && yarn publish --access public --tag latest",
-    "publish:beta": "yarn build && yarn publish --access public --tag beta"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.9",
-    "jest": "^29.3.1",
-    "ts-jest": "^29.0.3",
-    "typescript": "^4.9.3"
   },
   "keywords": [
     "util",
@@ -35,5 +25,12 @@
     "utilities",
     "typescript",
     "assets"
-  ]
+  ],
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsbb": "^3.7.8"
+  }
 }
