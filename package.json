@@ -1,6 +1,6 @@
 {
   "name": "@fukumi/libraries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript libraries.",
   "type": "module",
   "main": "dist/index.js",
@@ -15,7 +15,8 @@
     "node": ">=18.0.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "tsconfig.json"
   ],
   "exports": {
     ".": {
