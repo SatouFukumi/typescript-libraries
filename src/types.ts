@@ -1,3 +1,5 @@
+type Px = number
+
 declare global {
   namespace F {
     namespace Libs {
@@ -11,9 +13,6 @@ declare global {
       }
     }
   }
-
-  type MilliSec = number
-  type Px = number
 }
 
 export default F

@@ -1,4 +1,4 @@
-export const helper = {
+export const helpers = {
   /**
    * Returns a rounded number with a specified number of decimal place(s).
    *
@@ -121,4 +121,4 @@ export const helper = {
   },
 }
 
-export default helper
+export default helpers
