@@ -1,3 +1,5 @@
+import type { MilliSec } from "./types"
+
 /**
  * chaining async procedures
  */

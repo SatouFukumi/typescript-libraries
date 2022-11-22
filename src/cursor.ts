@@ -1,3 +1,5 @@
+import type Libs from './types'
+
 const cursor = {
   positionX: 0,
   positionY: 0,
@@ -30,4 +32,4 @@ const cursor = {
   },
 }
 
-export default cursor as F.Libs.FCursor
+export default cursor as Libs.Cursor
