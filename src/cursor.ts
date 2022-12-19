@@ -1,6 +1,6 @@
-import type Libs from './types'
+import type { CursorWatcher } from "./types"
 
-const cursor = {
+export const cursor = {
   positionX: 0,
   positionY: 0,
   deltaX: 0,
@@ -32,4 +32,4 @@ const cursor = {
   },
 }
 
-export default cursor as Libs.Cursor
+export default cursor as CursorWatcher
