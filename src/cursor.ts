@@ -1,6 +1,6 @@
 import type { CursorWatcher } from "./types"
 
-export const cursor = {
+export const cursor: CursorWatcher = {
   positionX: 0,
   positionY: 0,
   deltaX: 0,
@@ -30,6 +30,6 @@ export const cursor = {
     cursor.deltaX = event.movementX
     cursor.deltaY = event.movementY
   },
-}
+} as CursorWatcher
 
 export default cursor as CursorWatcher
