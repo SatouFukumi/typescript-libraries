@@ -1443,6 +1443,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
   integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
 
+"@types/node@^18.11.17":
+  version "18.11.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.17.tgz#5c009e1d9c38f4a2a9d45c0b0c493fe6cdb4bcb5"
+  integrity sha512-HJSUJmni4BeDHhfzn6nF0sVmd1SMezP7/4F0Lq+aXzmp2xm9O7WXrUtHW/CHlYVtZUbByEvWidHqRtcJXGF2Ng==
+
 "@types/node@~16.11.26":
   version "16.11.68"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.68.tgz#30ee923f4d940793e0380f5ce61c0bd4b7196b6c"
@@ -3581,10 +3586,10 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
-tsbb@^3.7.8:
-  version "3.7.8"
-  resolved "https://registry.yarnpkg.com/tsbb/-/tsbb-3.7.8.tgz#09462c5baa7f7f4ed119e14c42cb0ff28c0b2628"
-  integrity sha512-eBTnCxTcS1ka8bI3yVouxyE4m/so1oPY2yMhIPcgmMvv68YLj1JOGgV10yfWyxxJc6Ansg76imUIHG1a5ckYQw==
+tsbb@^3.7.9:
+  version "3.7.9"
+  resolved "https://registry.yarnpkg.com/tsbb/-/tsbb-3.7.9.tgz#af16981201c83404744a3de1eddad96ba7f2ffd5"
+  integrity sha512-zV5DA1n2WoLdyFe0k3eB+u81o9snSM3bGxb3HiGAAHZNVer5qHrJK9ROCx7gxMKA/72n2Xg5nEt9kOeUcngKng==
   dependencies:
     "@babel/core" "~7.18.0"
     "@babel/plugin-proposal-class-properties" "~7.18.0"

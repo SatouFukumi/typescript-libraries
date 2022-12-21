@@ -1,4 +1,4 @@
-export const isMobile = () => {
+const isMobile = () => {
   if (typeof window === "undefined") return false
 
   const toMatch = [
@@ -13,3 +13,5 @@ export const isMobile = () => {
 
   return toMatch.some((toMatchItem) => navigator.userAgent.match(toMatchItem))
 }
+
+export default isMobile

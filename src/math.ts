@@ -4,14 +4,14 @@
  * @param       number                value to be rounded
  * @param       fractionDigits        the decimal place(s)
  */
-export const round = function (number: number, fractionDigits = 0): number {
+export const getRounded = function (number: number, fractionDigits = 0): number {
   return Number(number.toFixed(fractionDigits))
 }
 
 /**
  * Returns a number greater than `min` and smaller than `max`.
  */
-export const clamp = function (
+export const getClamp = function (
   min: number,
   dynamicValue: number,
   max: number
@@ -23,43 +23,48 @@ export const clamp = function (
 }
 
 /**
- * Returns a random number greater than `min` and smaller than or equal to `margin[0]`
- * or a random number smaller than `max` and greater than or equal to `margin[1]`.
+ * Returns a random number which :
+ * - is greater than or equal `min` and smaller than or equal to `margin.min` (`min` <= `getRandomBetween(...)` <= `margin.min`).
+ *
+ * or
+ *
+ * - is smaller than or equal `max` and greater than or equal to `margin.max` (`margin.max` <= `getRandomBetween(...)` <= `max`).
  *
  * ---
  *
- * Can optionally return an integer or a decimal number.
+ * Can optionally return an integer or a double.
  *
  * ---
  *
  * ```ts
  *
  * // default
- * { toInt: true, margin: undefined }
+ * { toInteger: true, margin: undefined }
  * ```
  */
-export const randomBetween = function (
+export const getRandomBetween = (
   min: number,
   max: number,
   {
-    toInt = true,
-    margin = undefined
-  }: { toInt?: boolean; margin?: [number, number] } = {}
-): number {
+    toInteger = true,
+    margin = undefined,
+  }: { toInteger?: boolean; margin?: { min: number; max: number } } = {}
+): number => {
   if (min > max)
     throw new Error(`'math.clamp()' : 'min' - ${min} is greater than 'max' - ${max}`)
 
-  if (!!margin && margin[0] > margin[1])
+  if (!!margin && margin.min > margin.max)
     throw new Error(
-      `'math.clamp()' : 'margin[0]' - ${margin[0]} is greater than 'margin[1]' - ${margin[1]}`
+      `'math.clamp()' : 'margin.min' - ${margin.min} is greater than 'margin.max' - ${margin.max}`
     )
 
-  const result = toInt
-    ? Math.floor(Math.random() * (max - min + 1) + min)
-    : Math.random() * (max - min + 1) + min
+  // 0 <= Math.random() < 1
+  const result = toInteger
+    ? min + Math.floor(Math.random() * (max - min + 1))
+    : min + Math.random() * (max - min)
 
-  if (!!margin && result > margin[0] && result < margin[1])
-    return this.randomBetween(min, max, { toInt, margin })
+  if (!!margin && result > margin.min && result < margin.max)
+    return getRandomBetween(min, max, { toInteger, margin })
 
   return result
 }
